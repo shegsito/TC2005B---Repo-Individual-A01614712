@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyLandingPage</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+    
+<!-- Organismo navbar-->
+    <nav class = "navbar">
+       <a href="#" class="navbar__logo">SHEGSITO</a>
+
+       <ul class="navbar__links">
+            <li><a href="#"><strong>about</strong></a></li>
+            <li><a href="#"><strong>preguntas</strong></a></li> 
+       </ul>
+
+       <!-- Aqui pongo la molecula del search bar para este nav-->
+        <div class = "search-bar">
+            <input class = "search-bar__input" type="text" placeholder="hola">
+            <button class = "btn btn--primary">Buscar</button>
+         </div>
+    </nav>
+    
+<!-- Hero-->
+    <!-- Organismo: Hero -->
+    <section class="hero">
+    <p class="hero__eyebrow">MyLandingPage</p>
+
+    <h1 class="hero__title">
+        SHEGSITO<br>
+    </h1>
+
+    <p class="hero__subtitle">
+        Bienvenido a mi landing page, hecho con css y html
+    </p>
+
+    <div class="hero__img">
+        <!-- Átomos: botones -->
+        <img class="image-cover" src="/img/spin-haunter.gif">
+    </div>
+    
+<!--Las tarjetas con imagenes-->
+    <section class = "img-section">
+
+        <div class = "img-grid">
+            <img class = "image-cover" src="/img/bannana.jpg">
+            <div class = "img-card__body">
+                <div class = "image-card__footer">
+                    <span class="badge badge--Welcome">Welcome</span>
+                </div> 
+            </div>
+        </div> 
+
+        <div class = "img-grid">
+            <img class = "image-cover" src="/img/wolf.jpg">
+            <div class = "img-card__body">
+                <div class = "image-card__footer">
+                    <span class="badge badge--Welcome">To My</span>
+                </div> 
+            </div>
+        </div> 
+
+        <div class = "img-grid">
+            <img class = "image-cover" src="/img/guitarneck.jpg">
+            <div class = "img-card__body">
+                <div class = "image-card__footer">
+                    <span class="badge badge--Welcome">Page</span>
+                </div> 
+            </div>
+        </div> 
+    </section>
+
+    <section id="reflexion">
+        <h3> PREGUNTAS  </h3>
+        <div class="caja-texto">
+            <ul class="caja-texto__class">
+                <li>
+                    <strong>¿Cuál es la diferencia entre padding y margin?</strong> 
+                    <p>El <em>margin</em> es el espacio exterior que separa un elemento de otros, mientras que el <em>padding</em> es el espacio interior entre el contenido y su propio borde.</p>
+                </li>
+                <br>
+                <li>
+                    <strong>¿Por qué se recomienda usar box-sizing: border-box?</strong> 
+                    <p>Porque incluye el <em>padding</em> y el grosor del borde dentro del tamaño total de la caja, evitando que los elementos se "ensanchen" más de lo que definiste.</p>
+                </li>
+                <br>
+                <li>
+                    <strong>¿Qué significa diseñar con enfoque mobile-first?</strong> 
+                    <p>Es una estrategia donde se escribe el CSS pensando primero en celulares y pantallas pequeñas, añadiendo complejidad para laptops mediante <em>media queries</em> después.</p>
+                </li>
+                <br>
+                <li>
+                    <strong>¿En qué situaciones preferirías rem sobre px?</strong> 
+                    <p>Casi siempre para textos y espaciados, ya que los <em>rem</em> son relativos y permiten que la página sea accesible si el usuario cambia el tamaño de fuente en su navegador.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="footer">
+        <footer class="footer">
+            <p> Shegsito in github 2026</p>
+            <p> Lab2 CSS - Tecnólogico de Monterrey</p>
+            <p> Construcción de Software y toma de decisiones</p> 
+        </footer>
+    </section>
+
+    <p> Me esforce mucho haciendo mi pagina :3</p>
+</body>
+
+</html>

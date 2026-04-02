@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Mi perfil - Germán</title>
+  </head>
+
+  <style>
+    body{
+      background-color: #1a1a1a;
+      color: #ffff;
+      font-family: sans-serif;
+      padding: 100px;
+    }
+
+  </style>
+  <body>  
+      <header>
+       <h1 style="color :rgb(255, 0, 115);"> YO </h1>
+      </header>
+
+    <main>
+      <section>
+        <h2>Presentación breve</h2>
+        <p> Hola, me llamo Germán, soy un aficionado de la música me encanta todo lo relacionado con eso. </p>
+      </section>
+
+      <section>
+        <h2>Mis Proyectos</h2>
+        <p>La verdad no tengo proyectos, no se me ocurre que poner. Entonces aquí van algunos links a mis canciones favoritas.</p>
+    
+      </section>
+
+      <ul>
+        <li>Canción 1: <a href = "https://www.youtube.com" target="_blank">youtube</a> </li>
+        
+        <p> Me gusta mucho esta canción porque suena muy cool y es bastante tranquila</p>
+        <figure> 
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/3moMHMhiq7c?si=gHi9ix0JPePZFSb8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </figure>
+
+        <li>Canción 2: <a href = "https://www.youtube.com/watch?v=9kqnsoY94L8" target="_blank">youtube</a></li>
+        <figure>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Fas1dkyd-5w?si=mezbDnLAfMZgKngt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </figure>
+      </ul>
+    </main>
+
+    <preguntas>
+      <h2 style="color: blue">Preguntas</h2>
+
+      <ol>
+        <li><strong>¿Cuál es la diferencia entre Internet y la World Wide Web?</strong></li>
+        <p>El internet es la estructura física y lógica que conecta computadoras, mientras que la WWW es un servicio que funciona sobre internet, es el sistema de documentos de hipertexto</p>
+
+        <li><strong>¿Cuáles son las partes de un URL?</strong></li>
+        <p>Las partes de una URL son las siguientes:</p>
+        <ul>
+            <p>Protocolo: https://</p>
+            <p>Subdominio: www</p>
+            <p>Puerto: 80</p>
+            <p>Ruta: /route/path</p>
+            <p>Parámetros o query: ?id=10</p>
+            <p>Fragmento: #seccion</p>
+        </ul>
+
+        <li><strong>¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</strong></li>
+        <ul>
+            <p>GET: solicita datos de un recurso en lectura</p>
+            <p>HEAD: solicita solo los encabezados </p>
+            <p>POST: Envía datos para crear un nuevo recurso</p>
+            <p>PUT: Reemplaza por completo un recurso existente</p>
+            <p>PATCH: Aplica modificaciones a un recurso</p>
+            <p>DELETE: ELimina un recurso específico</p>
+        </ul>
+
+        <li><strong>¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿Por qué?</strong></li>
+        <p>Para esa acción se utiliza POST, porque se están enviando datos al HTTP, no esta en la URL</p> 
+        
+        <li><strong>¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL?</strong></li>
+        <p>Se utiliza el GET, esto para pedir al server que entreguen la dirección</p>
+
+        <li><strong> ¿Si un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error?</strong></li>
+        <p>Significa que esta bien "OK". La solicitud solo fue exitosa.</p>
+        
+        <li><strong>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 404? ¿Por qué?</strong></li>
+        <p>En su mayoría si porque el enlace puede estar roto, modificado o movida de dirección, por lo que el dev debe corregirlo. Pero si el usuario esribió mal el URL pues ya es su problema.</p>
+
+        <li><strong>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 500? ¿Por qué?</strong></li> 
+        <p>Si, "Internal Server Error", el servidor tiene una falla o el bacckend y el desarollador debería revisar que esta pasando.</p>
+
+        <li><strong>¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén desaprobados.</strong></li>
+        <p>Significa que hay cosas que ya no son buenas prácticas y podrían ser eliminadas. Tales como center,font,u. Eliminandose porque es algo que debería estar en CSS.</p>
+
+        <li><strong>¿Qué componentes de estructura y estilo tiene una tabla?</li>
+        <p>Una tabla tiene componentes de estructura que la crean tales como table, tr, tfoot, td y de estilo tales como border, padding entre muchos más</strong></p>
+
+        <li><strong>¿Cuáles son los principales controles de una forma HTML5?</strong></li>
+        <p>Son password, checkbox radio, type="text", select, button.</p>
+
+        <li><strong>el ciclo de vida y desarrollo de los sistemas de información: ¿Cuál es el ciclo de vida de los sistemas de información? ¿Cuál es el ciclo de desarrollo de sistemas de información?</strong></li>
+        <p>El ciclo de vida del sistema es el proceso que nace desde la necesidad, hasta que el sistema ya no existe: Planificación, Análisis, Diseño, Implementación, Pruebas, Instalación y Mantenimiento.</p>
+        <p>El ciclo de desarrollo esta enfocado en la creación del software: Requerimientos, diseño de software, codificación y pruebas.</p> 
+      </ol>
+
+    </preguntas>
+  </body>
+</html>
