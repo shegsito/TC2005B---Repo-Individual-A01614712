@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Películas gamosas</h1>
+    <p id="parrafo">Este es el lab_programacion orientada a eventos, aquí aprenderemos a programar eventos para añadirlos en nuestra página</p>
+    <ul class="list"> 
+        <li>Titanic</li>
+        <li>Shrek</li>
+        <li>Jurassic Park</li>
+    </ul>
+    <script>
+        let newH3 = document.createElement("h3");
+        newH3.textContent = "Hola soy un texto negro";
+        document.body.appendChild(newH3);
+
+        const h3 = document.querySelector("h3");
+        h3.style.color = "red";
+    </script>
+
+        <!-- Aqui van las preguntas del lab-->
+
+    <p id ="parrafo"> ¿Por que es una buena practica usar JavaScript para checar que sean validos los inputs de las formas antes de enviar los datos al servidor?</p>
+    <p id ="parrafo"> Por que de esta forma tenemos un seguimiento más formal que en el futuro nos evitara caer en muchos bugs, tal vez estamos enviando datos incorrectos al server y no nos damos cuenta hasta que todo sale mal.</p>
+    <p id ="parrafo"> ¿Como puedes saltarte la seguridad de validaciones hechas con JavaScript?</p>
+    <p id ="parrafo"> Se puede abrir las DEVTools y modificar atributos como requires o modificando el JS desde ahí mismo antes de correr </p>
+    <p id ="parrafo"> Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿por que la primera pregunta dice que es una buena practica?</p>
+    <p id ="parrafo"> Porque al validar buscamos crear un entorno más comodo, el servidor tiene que validar todo y asumir que el cliente tiene intenciones raras. </p>
+
+
+    <button id="btn">picame</button>
+
+    <script>
+        let log = console.log;
+        
+        let variablePar = document.getElementById("parrafo");
+        log(variablePar);
+
+        log("Bandera");
+        log("Bandera2");
+        log("Bandera eñ bueno");
+
+        const h1Element = document.querySelector("h1");
+        log(h1Element);
+        
+        const list = document.querySelector(".list");
+        log(list);
+
+        let listaSinOrden = document.createElement("ul");
+        document.body.appendChild(listaSinOrden);
+
+        let elementoLista1 = document.createElement("li");
+        elementoLista1.textContent = "HTML";
+
+        let elementoLista2 = document.createElement("li");
+        elementoLista2.textContent = "CSS";
+
+        let elementoLista3 = document.createElement("li");
+        elementoLista3.textContent = "JS";
+
+        listaSinOrden.appendChild(elementoLista1);
+        listaSinOrden.appendChild(elementoLista2);
+        listaSinOrden.appendChild(elementoLista3);
+
+        let newButton = document.createElement("button");
+        newButton.textContent = "Mostrar alerta";
+        newButton.setAttribute("id", "btn2"); 
+        document.body.appendChild(newButton);
+
+        const button = document.getElementById("btn2");
+
+        button.addEventListener("click", function() {
+            alert("Hola, haz hecho clic en el botón");
+        });
+    </script>
+
+
+</body>
+</html>
