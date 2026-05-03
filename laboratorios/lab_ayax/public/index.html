@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>AJAX Consumption</title>
+    <link href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+
+  </head>
+  <body>
+    <h1>AJAX consumption</h1>
+
+    <h1>Laboratorio AJAX</h1>
+
+    <ul>
+        <li>
+            <strong>¿Qué importancia tiene AJAX en el desarrollo de RIA's (Rich Internet Applications)?</strong>
+            <p>Es fundamental porque permite intercambiar datos con el servidor y actualizar partes de la página web sin necesidad de recargarla por completo. Esto hace que la navegación sea mucho más rápida, interactiva y fluida</p>
+        </li>
+
+        <li>
+            <strong>¿Qué implicaciones de seguridad tiene AJAX? ¿Dónde se deben hacer las validaciones de seguridad, del lado del cliente o del lado del servidor?</strong>
+            <p>Al exponer más puntos de acceso (endpoints), AJAX puede aumentar la superficie de ataques como XSS (Cross-Site Scripting) si no se maneja bien la información. </p>
+        </li>
+
+        <li>
+            <strong>¿Qué es JSON?</strong>
+            <p>JSON es un formato de texto ligero entre un servidor y una aplicación web. Se ha convertido en el estándar gracias a que es más sencillo y rápido de procesar que otros formatos como XML.</p>
+        </li>
+    </ul>
+
+    <div id="productos-container"></div>
+
+    <h2>Save Product</h2>
+
+    <form id="myForm">
+      <input type="number" id="id" name="id" placeholder="Id"></input>
+      <input type="text" id="name" name="name" placeholder="Name"></input>
+      <input type="number" id="price" name="price" step="any" placeholder="Price"></input>
+      <input type="submit" id="submitButton"></input>
+    </form>
+    <button id="updateProducts">Update Products</button>
+    <code id="codeResult"></code>
+    <div id="wrapper"></div>
+  </body>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.umd.js"></script>
+</html>
