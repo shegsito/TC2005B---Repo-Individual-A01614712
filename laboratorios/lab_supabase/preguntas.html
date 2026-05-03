@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio Interacción con la base de datos</title>
+</head>
+<body>
+    <h1>Laboratorio Interacción con la base de datos</h1>
+
+    <ul>
+        <li>
+            <strong>¿Qué ventajas tiene escribir el código SQL únicamente en la capa del modelo?</strong>
+            <p>Permite mantener una separación de responsabilidades. Esto facilita el mantenimiento del código, 
+                ya que las modificaciones en la db no afectarán una capa más allá de esa.</p>
+        </li>
+
+        <li>
+            <strong>¿Qué es SQL injection y cómo se puede prevenir?</strong>
+            <p>Es una vulnerabilidad donde un atacante inserta código SQL en las entradas de la aplicación 
+                para manipular la base de datos. Se previene utilizando consultas parametrizadas (placeholders), 
+                validando las entradas del usuario y limitando los permisos de acceso.</p>
+        </li>
+
+        <li>
+            <strong>¿Por qué en la práctica las credenciales de Supabase viven en un archivo .env y no directamente en database.js? Menciona al menos dos consecuencias concretas (no teóricas) de haberlas escrito en el código y haber hecho commit.</strong>
+            <p>Viven en un archivo .env para no subirlas  y proteger información sensible. Los atacantes podrían hacer malicias con los
+                datos de esos archivos que tendrán consecuencias en tu proyecto.</p>
+        </li>
+
+        <li>
+            <strong>¿Qué problema resuelve usar un pool de conexiones en lugar de abrir y cerrar una conexión nueva en cada request?</strong>
+            <p>Resuelve la sobrecarga de rendimiento y la lentitud. Crear una conexión nueva por cada petición consume demasiado tiempo 
+                y recursos del servidor; el pool mantiene conexiones ya abiertas y listas para ser reutilizadas, lo que hace a la 
+                aplicación mucho más rápida.</p>
+        </li>
+
+        <li>
+            <strong>En la práctica usaste pool.query(sql, [valor1, valor2]) con placeholders $1, $2 en lugar de armar el query concatenando strings. Muestra un ejemplo corto de un query inseguro y su versión parametrizada, y explica en 2-3 líneas por qué el segundo bloquea una inyección como ' OR 1=1 --.</strong>
+            <p><strong>Inseguro:</strong> <code>const sql = "SELECT * FROM usuarios WHERE id = " + input;</code></p>
+            <p><strong>Seguro:</strong> <code>pool.query("SELECT * FROM usuarios WHERE id = $1", [input]);</code></p>
+            <p><strong>Explicación:</strong> Usar la versión parametrizada, la db interpreta el valor como texto plano, algo que puede interpretar tu db como un comando o acción.</p>
+        </li>
+    </ul>
+
+</body>
+</html>
