@@ -50,6 +50,7 @@ let spawnTimer = 0;
 const SPAWN_INTERVAL = 0.9; // segundos entre spawns
 let gameOver = false;
 let score = 0;
+let highScore = 0;
 
 function rectsOverlap(ax,ay,aw,ah,bx,by,bw,bh){
     return  ax < bx+bw && 
@@ -93,6 +94,7 @@ function update(dt){
             if(rectsOverlap(px, player.y, CAR_WIDTH, CAR_HEIGHT, 
                 ex, e.y, CAR_WIDTH, CAR_HEIGHT)){
                 gameOver = true;
+                if(score > highScore) highScore = score;
                 break;
             }
         }
@@ -118,7 +120,7 @@ function render(){
     }
 
     // Rivales
-    ctx.fillStyle = "ff66cc";
+    ctx.fillStyle = "#ff66cc";
     for(const e of enemies){
         ctx.fillRect(laneToX(e.lane), e.y, CAR_WIDTH, CAR_HEIGHT);
     }
@@ -132,6 +134,8 @@ function render(){
     ctx.font = 'bold 16px "Courier New", monospace';
     ctx.textAlign = 'left';
     ctx.fillText('SCORE: ' + Math.floor(score), 10, 24);
+    ctx.fillStyle = '#ffdd44';
+    ctx.fillText('BEST:  ' + Math.floor(highScore), 10, 44);
 
     if (gameOver) {
         ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
